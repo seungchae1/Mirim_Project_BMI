@@ -28,24 +28,24 @@ public class ResultActivity extends AppCompatActivity {
         double Bmi= weight / Math.pow(tall/100, 2);
         String wResult="";
 
-        if(Bmi>30){
-            wResult="심한 과체중";
+        if(Bmi>35){
+            wResult="고도비만";
             imgV.setImageResource(R.drawable.bmi5);
+        }
+        else if(Bmi>30) {
+            wResult="비만";
+            imgV.setImageResource(R.drawable.bmi4);
         }
         else if(Bmi>25) {
             wResult="과체중";
-            imgV.setImageResource(R.drawable.bmi4);
-        }
-        else if(Bmi>18.5) {
-            wResult="표준체중";
             imgV.setImageResource(R.drawable.bmi3);
         }
-        else if(Bmi>15){
-            wResult="저체중";
+        else if(Bmi>18.5){
+            wResult="표준체중";
             imgV.setImageResource(R.drawable.bmi2);
         }
         else {
-            wResult="심한 저체중";
+            wResult="저체중";
             imgV.setImageResource(R.drawable.bmi1);
         }
 
